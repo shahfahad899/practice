@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Google Map</title>
+
+	<style>
+		#my_map {
+			height: 400px;
+			width: 900px;
+			border:2px solid red;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="my_map">
+
+	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvBe6t5-InpTLgcbqLxwkDW2xABF3gcPc&amp;sensor=false"></script>
+
+	<script>
+//every location in the world has a point representation 
+//point(x,y ) geography point of view
+//x -> latitude
+//y -> longitude
+
+    //33.9982623, 71.5308959,
+
+function initMap() {
+
+	    var myLatLng = {lat: 33.999244, lng: 71.492812};
+
+    var map = new google.maps.Map(document.getElementById('my_map'), {
+    	zoom: 19,
+    	 center: myLatLng
+    });
+    const image = 
+    var marker = new google.maps.Marker({
+    	position: myLatLng,
+    	map: map,
+    	title: 'Frontier Computer Academy!',
+    	animation: google.maps.Animation.DROP,
+    	icon: image
+    });
+
+	
+//info window
+
+	var infoWindow = new google.maps.InfoWindow({
+		content: "<h3>Frontier Computer Academy</h3><b><p>Shaheen Town<br> Plaza-1<br>Peshawar, Khyber<br>Pakhtunkhwa<br>Pakistan</p></b>"
+	});
+	google.maps.event.addListener(marker,'click',function(){
+		infoWindow.open(map,marker);
+	});
+}
+	google.maps.event.addDomListener(window, 'load', initMap());
+
+</script>
+</body>
+</html>

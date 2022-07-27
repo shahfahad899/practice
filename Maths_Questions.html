@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		body{
+			background: #5DADE2;
+
+			
+		}
+		.container{
+			width: 400px;
+			height: 500px;
+			border-radius: 10px;
+			margin: 50px auto;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			background: #9FE2BF;
+			
+			position: absolute;
+			top: 3%;
+			left: 33%;
+			border: 1px solid black;
+		}
+		#result{
+			width: 400px;
+			height: 80px;
+			border: 1px solid black;
+		    border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			background: #FFA07A;
+			
+
+		}
+		#ans{
+			font-size: 30px;
+			text-align: center;
+			margin-top: 20px;
+		}
+		#first{
+			width: 150px;
+			height: 50px;
+			border: 2px solid black;
+			margin: 50px 10px;
+			float: left;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background: #D1F2EB;
+
+		}
+		#second{
+			width: 150px;
+			height: 50px;
+			border: 2px solid black;
+			margin: 50px 10px;
+			float: right;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background: #D1F2EB;
+
+		}
+		#f1,#f2{
+			margin-top: 3px;
+			font-size: 30px;
+			text-align: center;
+		}
+		#opr{
+			font-size: 45px;
+			font-weight: bold;
+			position: relative;
+			left: 4%;
+			top: 11%;
+		}
+		input{
+			height: 40px;
+			margin: 10px 80px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+
+		}
+		button.fbtn{
+			
+			margin-left: 145px;
+			margin-top: 20px;
+			border-radius: 5px;
+			height: 50px;
+			background: black;
+			color: white;
+			font-size: 20px;
+			transition: width 4s, height 4s, transform 6s
+			
+		}
+		button{
+			height: 80px;
+			width: 120px;
+			font-size: 50px;
+			font-family: fantasy;
+			color: black;
+			cursor: pointer;
+			border-radius: 10px;
+			margin-top: 35px;
+			transition: width 4s, height 4s, transform 4s;
+		}
+		button:hover{
+			transform: rotate(360deg);
+		}
+		button.fbtn:hover{
+			transform: rotate(360deg);
+		}
+		#add{
+			background: #F6C500;
+		}
+		#sub{
+			background: red;
+		}
+		#mul{
+			background: blue;
+		}
+		#div{
+			background: salmon;
+		}
+		h1{
+			text-align: center;
+			margin-top: 20px;
+		}
+		.heading1{
+			width: 400px;
+			height: 100px;
+			border: 1px solid black;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			background: cyan;
+
+		}
+		.circle{
+			width: 550px;
+			height: 657px;
+			
+			background: whitesmoke;
+			position: absolute;
+			left: -18%;
+			
+		}
+		.btn_div{
+			width: 120px;
+			height: 498px;
+			border: 1px solid black;
+			position: absolute;
+			top: 11%;
+			right: 28.59%;
+			border-radius: 10px;
+			background: black;
+		}
+		.triangle{
+			width: 440px;
+			height: 440px;
+			position: absolute;
+			top: 15%;
+			right: 31.60%;
+			transform: rotate(42deg);
+			background: whitesmoke;
+			border-radius: 10%;
+			/*border-top-left-radius: 10%;
+			border-top-right-radius: 10%;
+			border-bottom-left-radius: 10%;
+			border-bottom-right-radius: 10%;*/
+		
+		}
+		.pic{
+			width: 300px;
+			height: 655px;
+			
+			position: absolute;
+			right: 0%;
+			background: whitesmoke;
+			
+		}
+		
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="pic"></div>
+	<div class="triangle"></div>
+	<div class="btn_div">
+	<button onclick="Add()" id="add">+</button>
+	<button onclick="Sub()" id="sub">-</button>
+	<button onclick="Mul()" id="mul">*</button>
+	<button onclick="Div()" id="div">/</button>
+	</div>
+
+
+	<div class="circle">
+		
+	</div>
+	
+	<div class="container">
+		<div class="heading1">
+	<h1> Mathematics Questions </h1>
+	</div>
+		<div id="result">
+			<h2 id="ans"></h2>
+		</div>
+
+		<div id="first">
+			<h4 id="f1"></h4>
+		</div>
+		<label id="opr"></label>
+		<div id="second">
+			<h4 id="f2"></h4>
+		</div>
+		<input type="text" name="" id="enValue">
+		<button onclick="myfunction()" class="fbtn" id="chn"> Check ans </button>
+	</div>
+
+
+	<script type="text/javascript">
+		var n1,n2,add,sub,mul,div,enValue;
+		var result = 0;
+		// Addition code
+
+		function Add(){
+		 n1 = Math.floor(Math.random()*20);
+		 n2 = Math.floor(Math.random()*20);
+
+		document.getElementById("f1").innerHTML = n1;
+		document.getElementById("f2").innerHTML = n2;
+		document.getElementById("opr").innerHTML = "+";
+		  result = n1 + n2;
+		}
+
+		// Subtraction code
+		function Sub(){
+		 n1 = Math.floor(Math.random()*20);
+		 n2 = Math.floor(Math.random()*20);
+
+		document.getElementById("f1").innerHTML = n1;
+		document.getElementById("f2").innerHTML = n2;
+		document.getElementById("opr").innerHTML = "-";
+
+		 result = n1 - n2;
+		
+	}
+		
+		
+
+		// Multiplication code
+
+		function Mul(){
+		 n1 = Math.floor(Math.random()*10);
+		 n2 = Math.floor(Math.random()*10);
+
+		document.getElementById("f1").innerHTML = n1;
+		document.getElementById("f2").innerHTML = n2;
+		document.getElementById("opr").innerHTML = "*";
+
+		 result = parseInt(n1) * parseInt(n2);
+		
+	}
+
+	
+
+		// Division code
+
+		function Div(){
+		 n1 = Math.floor(Math.random()*20);
+		 n2 = Math.floor(Math.random()*20);
+
+		document.getElementById("f1").innerHTML = n1;
+		document.getElementById("f2").innerHTML = n2;
+		document.getElementById("opr").innerHTML = "/";
+
+		 result = n1 / n2;
+		
+	}
+
+		function myfunction(){
+
+			var enValue = document.getElementById("enValue").value;
+			if(result == enValue)
+			{
+				document.getElementById("ans").innerHTML= "Well done! Your Ans is correct";
+			}
+			else{
+				document.getElementById("ans").innerHTML= "Correct ans:"+result+".   Try again";
+			}
+
+		}
+		 enValue = document.getElementById("enValue").value="";
+		 document.getElementById("ans").innerHTML="";
+		
+	</script>
+</body>
+</html>

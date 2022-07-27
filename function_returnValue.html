@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+</head>
+<body>
+	<h1> Function with return value </h1>
+
+	<script type="text/javascript">
+		document.write("Total Subject = 3 <br> Total Marks = 300 <br><br>");
+		function sum(eng,computer,physics){
+			var total = eng+computer+physics;
+			return total;
+		}
+		var a =sum(87,85,67);
+		document.write("Obtained Marks = "+ a + "<br>");
+
+		function percentage(tt){
+			var per = tt/300*100;
+			return per;
+		}
+		var d = percentage(a);
+		document.write("percentage = "+d+" %");
+	</script>
+
+</body>
+</html>

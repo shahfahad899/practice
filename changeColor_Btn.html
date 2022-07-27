@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+	<style type="text/css">
+		body{
+			background: #9FE2BF;
+
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 100px auto;
+			border-radius: 10px;
+		}
+		h1{
+			text-align: center;
+			font-size: 30px;
+		}
+		button{
+			width: 85px;
+			height: 35px;
+			font-size: 22px;
+			font-family: sans-serif;
+			margin-left: 118px;
+			border-radius: 10px;
+			color: white;
+
+		}
+		.olive{
+			background: olive;
+		}
+		.maroon{
+			background: maroon;
+		}
+		.red{
+			background: red;
+		}
+		.purple{
+			background: purple;
+		}
+		.blue{
+			background: blue;
+		}
+		.green{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<h1> Select color for div </h1>
+	<div id="container" onmouseenter="fun()" onmouseout="myfun()">
+		<h1 id="heading"> Hellow </h1>
+	</div>
+	<button onmouseenter ="Olive()" class="olive"> Olive </button>
+	<button onmouseenter="Maroon()" class="maroon"> Maroon </button>
+	<button onmouseenter="Red()" class="red"> Red </button>
+	<button onmouseenter="Purple()" class="purple"> Purple </button>
+	<button onmouseenter="blue()" class="blue"> blue </button>
+	<button onmouseenter="green()" class="green"> Green</button>
+
+	<script type="text/javascript">
+
+		var a = document.getElementById("container");
+		a.style.backgroundColor = "lime";
+		var b = document.getElementById("heading");
+
+		function fun(){
+			a.style.backgroundColor = "black";
+			b.style.color = "white";
+		}
+
+		function myfun(){
+			a.style.backgroundColor = "white";
+			b.style.color = "black";
+		}
+
+
+		function Olive(){
+			a.style.backgroundColor = "Olive";
+
+		}  
+
+		function Maroon(){
+			a.style.backgroundColor = "Maroon";
+		}
+
+		function Red(){
+			a.style.backgroundColor = "Red";
+		}
+
+		function Purple(){
+			a.style.backgroundColor = "Purple";
+		}
+
+		function blue(){
+			a.style.backgroundColor = "blue";
+		}
+
+		function green(){
+			a.style.backgroundColor = "green";
+		}
+		
+	</script>
+
+</body>
+</html>

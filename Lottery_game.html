@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> game </title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			margin-left: 41%;
+			margin-top: 100px;
+			border-radius: 10px;
+			background: powderblue;
+			
+	
+		}
+		h1{
+			color: black;
+			font-size: 40px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+		}
+		h2{
+			margin-top: 13px;
+			color: black;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+		}
+		#btn{
+			margin-left: 38.60%;
+			margin-top: 10px;
+			width: 85px;
+			height: 50px;
+			border-radius: 10px;
+			background: black;
+			color: whitesmoke;
+			font-size: 25px;
+			font-weight: bold;
+			font-family: robatic,sans-serif;
+		}
+		#btn1{
+			
+			width: 85px;
+			height: 50px;
+			border-radius: 10px;
+			background: black;
+			color: whitesmoke;
+			font-size: 25px;
+			font-weight: bold;
+			font-family: robatic,sans-serif;
+		}
+		#content{
+			width: 270px;
+			height: 70px;
+			border: 1px solid black;
+			margin-left: 34.20%;
+			margin-top: 20px;
+			border-radius: 10px;
+			background: powderblue;
+			color: black;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1 id="h1"></h1>
+	</div>
+	<div id="content">
+		<h2 id="h"></h2>
+	</div>
+	<button id="btn" onclick="myfun()"> Play</button>
+	<button id="btn1" onclick="myfunction()"> check</button>
+
+	<script type="text/javascript">
+		var x;
+		function myfun(){
+		 x = Math.floor(Math.random()*10);
+		document.getElementById("h1").innerHTML=x;
+
+	}
+		
+
+
+		function myfunction(){
+			
+			
+			if(x===0){
+				document.getElementById("h").innerHTML="bad luck";
+			} else if(x===1){
+				document.getElementById("h").innerHTML="you won the car";
+			}else if(x===2){
+				document.getElementById("h").innerHTML="you won mobile";
+			}else if(x===3){
+				document.getElementById("h").innerHTML="you won bike";
+			}else if(x===4){
+				document.getElementById("h").innerHTML="bad luck";
+			}else if(x===5){
+				document.getElementById("h").innerHTML="you won computer";
+			}else if(x===6){
+				document.getElementById("h").innerHTML="bad luck";
+			}else if(x===7){
+				document.getElementById("h").innerHTML="you won house";
+			}else if(x===8){
+				document.getElementById("h").innerHTML="you won pen";
+			}else if(x===9){
+				document.getElementById("h").innerHTML="you won bikecycle";
+			}
+			else if(x===10){
+				document.getElementById("h").innerHTML="you won Iphone";
+			}
+
+		}
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Javascript another array method </title>
+</head>
+<body>
+
+	<div id="my_image_1" style="height:300px; width:500px; border:2px solid red;">
+
+	</div>
+
+	<div id="my_image_2" style="height:300px; width:500px; border:2px solid red;">
+
+	</div>
+
+	<input type="button" value="show Image" onclick="showImage();" />
+	<script type="text/javascript">
+		var sum = 0;
+		var arr = [];
+		
+			
+		 arr[0] = prompt("Enter Maths Marks");
+		 arr[1] = prompt("Enter Phy Marks");
+		 arr[2] = prompt("Enter Bio Marks");
+		
+		document.write("<ul>");
+	 	for(var b = 0; b < 3; b++){
+	 		document.write("<li>" + arr[b] + "</li>");
+	 		sum = sum + parseFloat(arr[b]);
+	 		
+	 	}
+	 	document.write("</ul>");
+
+	 	document.write("<b>Total</b>:" + "<b>" + sum + "</b>");
+		
+
+		function showImage() {
+			let path = 'fl.jpg';
+			document.getElementById("my_image_1").style.backgroundImage = "url('fl.jpg')";
+
+			document.getElementById("my_image_1").style.backgroundRepeat = "no-repeat";
+			
+		}
+
+		showImage();
+	</script>
+
+</body>
+</html>

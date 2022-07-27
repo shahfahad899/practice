@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> image </title>
+
+	<style>
+		.my-farmayesh {
+			height: 400px;
+			width: 700px;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div style="height:300px; width:500px; border:2px solid red;">
+		<img id="my_image_2" src="baby.jpg" />
+	</div>
+
+	<div id="box" style="height:300px; width:500px; border:2px solid red;">
+		<img src="baby.jpg" />
+	</div>
+
+	<input type="button" value="show Image" onclick="showImage();" />
+	<script type="text/javascript">
+
+		function showImage() {
+			let path = 'fl.jpg';
+			document.getElementById("my_image_2").src = "fl.jpg";
+
+			document.getElementById("box").style.backgroundColor = "#00FF00";
+
+			document.getElementById("box").style.width = "600px";
+
+			var obj = document.getElementById("box");
+  obj.classList.add("my-farmayesh");
+		}
+
+	</script>
+
+</body>
+</html>

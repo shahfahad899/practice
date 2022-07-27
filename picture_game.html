@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScripts </title>
+	<style type="text/css">
+		body{
+			background: powderblue;
+			background:  linear-gradient(red, yellow, green);
+		}
+		.container{
+			width: 350px;
+			height: 350px;
+			border: 1px solid honeydew;
+			margin-left: 250px;
+			margin-top: 60px;
+			box-shadow: 5px 5px 5px 5px #800080;
+			border-radius: 10px;
+			background: whitesmoke;
+
+		}
+		.heading1{
+			width: 350px;
+			height: 100px;
+			border: 1px solid honeydew;
+			text-align: center;
+			background: black;
+			color: whitesmoke;
+			text-shadow: 2px 2px honeydew;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+
+		}
+		#pic{
+			width: 350px;
+			height: 248px;
+			border: 1px solid honeydew;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+
+			
+		}
+		.btn_div{
+			width: 500px;
+			height: 120px;
+			border: 3px solid brown;
+			margin-left:170px;
+			margin-top: 25px;
+			border-radius: 10px;
+			box-shadow: 2px 5px 2px 5px black;
+			background: grey;
+
+		}
+		button{
+			width: 100px;
+			height: 50px;
+			border-radius: 10px;
+			border: 1px solid whitesmoke;
+			background: black;
+			color: whitesmoke;
+			font-size: 25px;
+			transition: width 2s, height 2s transform 2s;
+			margin-top: 5px;
+			}
+		button:hover{
+			transform: translateY(3px);
+			background: saddlebrown;
+			color: whitesmoke;
+		}
+		.Sareer{
+			
+			background-image: url(Sareer1.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.Shahfahad{
+			
+			background-image: url(Shahfahad1.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.Salar{
+			
+			background-image: url(Salaar.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.Maleha{
+			
+			background-image: url(Maleha.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.Manahil{
+			
+			background-image: url(Manahil.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.score_div{
+			width: 400px;
+			height: 350px;
+			border: 1px solid black;
+			position: absolute;
+			top: 13%;
+			left: 55%;
+			border-radius: 10px;
+			 box-shadow: 5px 10px #BA4A00;
+			 background: #2C3E50
+		}
+		#score{
+			width: 300px;
+			height: 250px;
+			border: 1px solid black;
+			margin-top: 40px;
+			margin-left:48px;
+			border-radius: 10px;
+			box-shadow: 5px 5px 8px blue, 10px 10px 8px powderblue, 15px 15px 8px green;
+			background: whitesmoke;
+			
+		}
+		h4{
+			margin-top: 20px;
+			margin-left: 80px;
+			font-weight: bold;
+			font-size: 40px;
+			color: black;
+			border-color: 2px salmon;
+			text-shadow: 2px 2px brown;
+		}
+		h2{
+			font-size: 50px;
+			margin-top: 8px;
+			margin-left: 14px;
+			text-shadow: 2px 2px royalblue;
+		}
+		h1{
+			text-align: center;
+			text-shadow: 2px 2px salmon;
+			font-weight: bold;
+		}
+		#keyno{
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+			position: absolute;
+			top: 20%;
+			left: 5%;
+			border-radius: 5px;
+			
+		}
+		h5{
+			text-align: center;
+			font-weight: bold;
+			font-size: 25px;
+			margin-top: 8px;
+			color: gold;
+			text-shadow: 1px 1px blue;
+
+		}
+	</style>
+</head>
+<body>
+	<h1> Press any six button and make score </h1>
+	<div id="keyno">
+		<h5 id="Press"></h5>
+	</div>
+	<div class="container" >
+		<div class="heading1" onmouseenter="colchg()" id="chn" onmouseout="colcng()">
+			<h1 id="first"></h1>
+		</div>
+		<div id="pic"></div>
+	</div>
+
+
+	<div class="btn_div">
+		<tr><button onclick="one()" id="btn1"> 1 </button><button onclick="two()" id="btn2"> 2 </button><button onclick="three()" id="btn3"> 3 </button><button
+			onclick="four()" id="btn4"> 4 </button><button onclick="five()" id="btn5"> 5 </button></tr>
+
+		<tr><button onclick="six()" id="btn6"> 6 </button><button onclick="seven()" id="btn7"> 7 </button><button onclick="eight()" id="btn8"> 8 </button><button onclick="niven()" id="btn9"> 9 </button><button onclick="ten()" id="btn10"> 10 </button></tr>
+	</div>
+	<div class="score_div">
+
+		
+	<div id="score">
+		<h2> Score Board </h2>
+		<h4>score : <label id="sco"></label></h4>
+	</div>
+	</div>
+
+
+	<script type="text/javascript">
+		
+		
+		var z = prompt("Enter Name");
+		var score = 0;
+		var score1 = 0;
+		var score2 = 0;
+		var score3 = 0;
+		var score4 = 0;
+
+		   
+		function one(){
+			var arr = ["Shahfahad","Salar","Sareer","Maleha","Manahil"];
+		var a = Math.floor(Math.random()*5);
+			
+			if (a==0 && z=="shahfahad") {
+				score = score + 1;
+			document.getElementById("sco").innerHTML = score;
+			document.getElementById("first").innerHTML = arr[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+			
+		}
+		else if(a==1 && z=="salar") {
+			score2 = score2 + 1;
+			document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = arr[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+			
+		}
+		else if(a==2 && z=="sareer") {
+			score1 = score1 + 1;
+			document.getElementById("sco").innerHTML = score1;
+			document.getElementById("first").innerHTML = arr[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+			
+		}
+		else if(a==3 && z=="maleha") {
+			score3 = score3 + 1;
+			document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = arr[3];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+		else if(a==4 && z=="manahil") {
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = arr[4];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+		
+	}
+		
+	function two(){
+		var animal = ["Salar","Salar","Manahil"];
+		var b = Math.floor(Math.random()*3)
+			
+			if (b==0 && z=="salar") {
+				score2 = score2 + 1;
+				document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = animal[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+		}
+		else if(b==1 && z=="salar") {
+			score2 = score2 + 1;
+			document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = animal[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+		}
+		else if(b==2 && z=="manahil"){
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = animal[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+	}
+
+
+	function three(){
+
+		var name = ["Shahfahad","Manahil"];
+		var b = Math.floor(Math.random()*2)
+			
+			if (b==0 && z=="shahfahad") {
+			
+			score = score + 1;
+			document.getElementById("sco").innerHTML = score;
+			document.getElementById("first").innerHTML = name[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+			
+		}
+		else if(b==1 && z=="manahil") {
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = name[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+	}
+
+	function four(){
+		var table = ["Sareer","Salar","Shahfahad","Maleha"];
+		var b = Math.floor(Math.random()*4)
+			
+			if (b==0 && z=="sareer") {
+				score1 = score1 + 1;
+			document.getElementById("sco").innerHTML = score1;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+			
+		}
+		else if(b==1 && z=="salar") {
+			score2 = score2 + 1;
+			document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+		}
+		else if(b==2 && z=="shahfahad") {
+			score = score + 1;
+			document.getElementById("sco").innerHTML = score;
+			document.getElementById("first").innerHTML = table[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+			
+
+		}
+		else if(b==3 && z=="maleha") {
+			score3 = score3 + 1;
+			document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = table[3];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+	}
+
+	function five(){
+		var table = ["Maleha","Sareer","Manahil"];
+		var b = Math.floor(Math.random()*3)
+			
+			if (b==0 && z=="maleha") {
+				score3 = score3 + 1;
+				document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+		else if(b==1 && z=="sareer") {
+			score1 = score1 + 1;
+			document.getElementById("sco").innerHTML = score1;
+			document.getElementById("first").innerHTML = table[1];
+			
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+			
+		}
+		else if(b==2 && z=="manahil") {
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = table[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+		
+	}
+
+	function six(){
+		var table = ["Maleha","Manahil","Salar"];
+		var b = Math.floor(Math.random()*3)
+			
+			if (b==0 && z=="maleha") {
+				score3 = score3 + 1;
+			document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+		else if(b==1 && z=="manahil") {
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+		else if(b==2 && z=="salar") {
+			score2 = score2 + 1;
+			document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = table[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+		}
+		
+	}
+
+	function seven(){
+		var table = ["Shahfahad","Sareer"];
+		var b = Math.floor(Math.random()*2)
+			
+			if (b==0 && z=="shahfahad") {
+				score = score + 1;
+				document.getElementById("sco").innerHTML = score;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+			
+		}
+		else if(b==1 && z=="sareer") {
+			score1 = score1 + 1;
+			document.getElementById("sco").innerHTML = score1;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+			
+		}
+		
+	}
+
+	function eight(){
+		var table = ["Salar","Maleha"];
+		var b = Math.floor(Math.random()*2)
+			
+			if (b==0 && z=="salar") {
+				score2 = score2 + 1;
+				document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+		}
+		else if(b==1 && z=="maleha") {
+			score3 = score3 + 1;
+			document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+		
+	}
+
+	function niven(){
+		var table = ["Manahil","Shahfahad"];
+		var b = Math.floor(Math.random()*2)
+			
+			if (b==0 && z=="manahil") {
+				score4 = score4 + 1;
+				document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+		else if(b==1 && z=="shahfahad") {
+			score = score + 1;
+			document.getElementById("sco").innerHTML = score;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+			
+		}
+		
+	}
+
+	function ten(){
+		var table = ["Maleha","Sareer","Salar","Manahil"];
+		var b = Math.floor(Math.random()*4)
+			
+			if (b==0 && z=="maleha") {
+				score3 = score3 + 1;
+			document.getElementById("sco").innerHTML = score3;
+			document.getElementById("first").innerHTML = table[0];
+			var c = document.getElementById("pic");
+			c.classList.add("Maleha");
+			
+		}
+		else if(b==1 && z=="sareer") {
+			score1 = score1 + 1;
+			document.getElementById("sco").innerHTML = score1;
+			document.getElementById("first").innerHTML = table[1];
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+			
+		}
+		else if(b==2 && z=="salar") {
+			score2 = score2 + 1;
+			document.getElementById("sco").innerHTML = score2;
+			document.getElementById("first").innerHTML = table[2];
+			var c = document.getElementById("pic");
+			c.classList.add("Salar");
+			
+		}
+		else if(b==3 && z=="manahil") {
+			score4 = score4 + 1;
+			document.getElementById("sco").innerHTML = score4;
+			document.getElementById("first").innerHTML = table[3];
+			var c = document.getElementById("pic");
+			c.classList.add("Manahil");
+			
+		}
+		
+	}
+
+		// div color change
+
+		var a = document.getElementById("chn");
+		var b = ['red','green','blue','yellow','brown','salmon'];
+		
+		function colchg(){
+				var c = parseInt(Math.random()*b.length);
+				a.style.backgroundColor = b[c];
+		}
+
+		function colcng(){
+			var a = document.getElementById("chn");
+			a.style.backgroundColor = "black";
+
+		}
+
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var btn5 = document.getElementById("btn5");
+		var btn6 = document.getElementById("btn6");
+		var btn7 = document.getElementById("btn7");
+		var btn8 = document.getElementById("btn8");
+		var btn9 = document.getElementById("btn9");
+		var btn10 = document.getElementById("btn10");
+		var presskey = 0;
+
+		btn1.addEventListener("click",function(){
+			btn1.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		
+		})
+
+		btn2.addEventListener("click",function(){
+			btn2.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn3.addEventListener("click",function(){
+			btn3.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+			
+		})
+
+		btn4.addEventListener("click",function(){
+			btn4.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn5.addEventListener("click",function(){
+			btn5.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn6.addEventListener("click",function(){
+			btn6.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn7.addEventListener("click",function(){
+			btn7.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn8.addEventListener("click",function(){
+			btn8.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn9.addEventListener("click",function(){
+			btn9.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		btn10.addEventListener("click",function(){
+			btn10.style.backgroundColor = "red";
+			presskey = presskey + 1;
+			document.getElementById("Press").innerHTML = presskey;
+		})
+
+		if(presskey == 4){
+			document.getElementById("keyno").innerHTML="your no is complete";
+		}
+
+		
+
+
+
+
+	</script>
+</body>
+</html>

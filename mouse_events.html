@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+	<style type="text/css">
+		body{
+			background: silver;
+		}
+		.header{
+			width: 400px;
+			height: 450px;
+			border: 1px solid black;
+			margin: 50px 0 0 450px;
+			background: darkcyan;
+			border-radius: 10px;
+
+		}
+		h1{
+			font-size: 35px;
+			text-align: center;
+			color: gold;
+			font-family: sans-serif;
+		}
+		h3{
+			font-size: 35px;
+			text-align: center;
+			color: gainsboro;
+			font-family: sans-serif;
+		}
+		button{
+			width: 80px;
+			height: 40px;
+			background: black;
+			color: whitesmoke;
+			align-content: center;
+			font-size: 15px;
+			margin-left: 160px;
+			border-radius: 3px;
+			font-weight: bold;
+
+		}
+		button:hover{
+			background: gold;
+			color: black;
+		}
+		p{
+			font-size: 35px;
+			text-align: center;
+			color: saddlebrown;
+			font-family: sans-serif;
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="header">
+	<h1> Quiz App </h1>
+	<p> For Childern</p>
+	<h3> 30 + 45 = </h3>
+	<h3> 20 + 55 = </h3>
+	<h3> 20 + 35 = </h3>
+	<button onclick ="maths()"> click Me</button>
+	</div>
+
+	<script type="text/javascript">
+		
+		function maths(){
+			var a = 30 + 45;
+			document.write("30 + 45 = " + a +"<br><br>");
+			var b = 20 + 55;
+			document.write("20 + 55 = " + b +"<br><br>");
+			var c = 20 + 35;
+			document.write("20 + 35 = " + c +"<br><br>");
+}
+	</script>
+
+</body>
+</html>

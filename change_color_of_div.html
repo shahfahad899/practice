@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 100px auto;
+		}
+		h1{
+			text-align: center;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1> Enter mouse change the color of div </h1>
+	<div id="container" onmouseenter="myfunction()" onmouseout="myfun()"></div>
+
+	<script type="text/javascript">
+		var a = document.getElementById("container");
+		var b = ['red','green','blue','yellow','brown','salmon'];
+		a.style.backgroundColor="violet";
+		function myfunction(){
+				var c = parseInt(Math.random()*b.length);
+				a.style.backgroundColor = b[c];
+		}
+
+		function myfun(){
+			a.style.backgroundColor="black";
+		}
+	</script>
+
+</body>
+</html>

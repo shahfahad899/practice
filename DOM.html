@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScript </title>
+	<style type="text/css">
+		body{
+			background: saddlebrown;
+		}
+		#result{
+			width: 225px;
+			height: 20px;
+			border: 2px solid black;
+			margin-left: 100px;
+			background: whitesmoke;
+			height: 25px;
+			border-radius: 5px;
+			font-size: 18px;
+		}
+		.addbox{
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+			margin-top: 40px;
+			margin-left: 500px;
+			background: silver;
+			border-radius: 5px;
+		}
+		.txt{
+			font-size: 22px;
+			margin-left: 100px;
+			color: saddlebrown;
+			font-weight: bold;
+
+		}
+		input{
+			margin-left: 100px;
+			height: 25px;
+			border-radius: 5px;
+			margin-top: 10px;
+			font-size: 18px;
+		}
+		input:hover{
+			background: yellow;
+			color: black;
+		}
+		.btn{
+			background: blue;
+			color: whitesmoke;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="addbox">
+		<h1> Simple Calculator</h1>
+	<label class="txt"> Enter First Number </label><br>
+	<input type="text"  id="n1"><br><br>
+	<label class="txt"> Enter Second Number </label><br>
+	<input type="text"  id="n2"><br><br>
+	<label class="txt"> Result </label>
+	<div id="result"></div><br>
+	<input type="button" name="" onclick="add()" value="Add" class="btn">
+	<input type="button" name="" onclick="sub()" value="Sub" class="btn">
+	<input type="button" name="" onclick="mul()" value="Mult" class="btn">
+	<input type="button" name="" onclick="div()" value="Divi" class="btn">
+	<br>
+	
+
+	</div>
+
+	<script type="text/javascript">
+		function add(){
+			var a = document.getElementById("n1").value;
+			var b = document.getElementById('n2').value;
+			if(!(isNaN(a)||isNaN(b))){
+			var c = parseInt(a) + parseInt(b);
+			document.getElementById("result").innerHTML= c;
+				}
+				else{
+					alert("invalid");
+				}	
+		}
+
+
+				// Subtraction code
+		function sub(){
+			
+			var a = document.getElementById("n1").value;
+			var b = document.getElementById('n2').value;
+			if(!(isNaN(a)||isNaN(b))){
+			var c = parseInt(a) - parseInt(b);
+			document.getElementById("result").innerHTML= c;
+				}
+				else{
+					alert("invalid");
+				}		
+		}
+
+
+			// Multiplication code
+
+		function mul(){
+			
+			var a = document.getElementById("n1").value;
+			var b = document.getElementById('n2').value;
+			if(!(isNaN(a)||isNaN(b))){
+			var c = parseInt(a) * parseInt(b);
+			document.getElementById("result").innerHTML= c;
+				}
+				else{
+					alert("invalid");
+				}	
+		}
+
+
+
+			// Division code
+
+		function div(){
+			
+			var a = document.getElementById("n1").value;
+			var b = document.getElementById('n2').value;
+			if(!(isNaN(a)||isNaN(b))){
+			var c = parseInt(a) / parseInt(b);
+			document.getElementById("result").innerHTML= c;
+				}
+				else{
+					alert("invalid");
+				}		
+		}
+	</script>
+
+</body>
+</html>

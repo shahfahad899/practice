@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Login </title>
+	<style type="text/css">
+		.container{
+			width: 300px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 100px auto;
+			padding: 50px 20px;
+			background: #CA6F1E ;
+			border-radius: 20px;
+		}
+		button{
+			width: 80px;
+			height: 30px;
+			font-size: 22px;
+			margin-left: 120px;
+			margin-top: 20px;
+			background: #E74C3C;
+			border-radius: 10px;
+		}
+		input{
+			height: 25px;
+			
+
+		}
+		.txt{
+			font-size: 22px;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<label class="txt"> userName: </label><input type="text" id="usern"><br><br><br>
+	<label class="txt">  password:  </label><input type="password" id="passw"><br><br>
+	<button onclick ="login()"> Login </button>
+	</div>
+
+	<script type="text/javascript">
+		function login(){
+		usern = document.getElementById("usern").value;
+		passw = document.getElementById("passw").value;
+        
+		if(usern=="Shahfahad" && passw=="123"){
+			location.assign("file:///E:/web%20workshop/JavaScript/Counter.html");
+		}
+		else{
+			window.alert("login failed");
+		}
+	}
+	</script>
+</body>
+</html>

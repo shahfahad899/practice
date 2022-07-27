@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> JavaScripts </title>
+	<style type="text/css">
+		.container{
+			width: 350px;
+			height: 350px;
+			border: 1px solid black;
+			margin: 50px auto;
+			border-radius: 10px;background: powderblue;
+
+		}
+		.heading1{
+			width: 350px;
+			height: 100px;
+			border: 1px solid black;
+			text-align: center;
+			background: black;
+			color: whitesmoke;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+
+		}
+		#pic{
+			width: 350px;
+			height: 248px;
+			border: 1px solid black;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			
+
+			
+		}
+		
+		.btn_div{
+			width: 500px;
+			height: 120px;
+			border: 1px solid black;
+			margin-left:425px;
+			border-radius: 10px;
+		}
+		button{
+			width: 100px;
+			height: 50px;
+			border-radius: 10px;
+			border: 1px solid whitesmoke;
+			background: black;
+			color: whitesmoke;
+			font-size: 25px;
+			transition: width 2s, height 2s transform 2s;
+			margin-top: 5px;
+			}
+		button:hover{
+			transform: translateY(3px);
+		}
+		.Sareer{
+			
+			background-image: url(Sareer1.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.Shahfahad{
+			
+			background-image: url(Shahfahad1.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.raza{
+			
+			background-image: url(raza.jpeg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.malik{
+			
+			background-image: url(malik1.jpeg);
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			
+		}
+		
+		
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="heading1">
+			<marquee><h1 id="first"></h1></marquee>
+		</div>
+		<div id="pic"></div>
+	</div>
+
+
+	<div class="btn_div">
+		<tr><button onclick="one()"> 1 </button><button onclick="two()"> 2 </button><button onclick="three()"> 3 </button><button
+			onclick="four()"> 4 </button><button onclick="five()"> 5 </button></tr>
+
+		<tr><button onclick="six()"> 6 </button><button onclick="seven()"> 7 </button><button onclick="eight()"> 8 </button><button onclick="nine()"> 9 </button><button onclick="ten()"> 10 </button></tr>
+	</div>
+
+	<input type="file" id="choose-file" name="choose-file" accept="image/*" />
+    <label for="choose-file"></label>
+
+	<script type="text/javascript">
+		
+		
+		const chooseFile = document.getElementById("choose-file");
+		const imgPreview = document.getElementById("pic");
+
+		chooseFile.addEventListener("change", function () {
+       getImgData();
+		});
+		function getImgData() {
+  const files = chooseFile.files[0];
+  if (files) {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(files);
+    fileReader.addEventListener("load", function () {
+      imgPreview.style.display = "block";
+      
+
+
+      imgPreview.innerHTML ='<img src="' + this.result + '" width="350" height="248"/>';
+      imgPreview.style.backgroundRepeat = "no-repeat";
+      imgPreview.style.backgroundSize = "cover";
+      
+
+
+    });    
+  }
+}
+
+
+
+/*
+		var a = prompt("Enter name");
+		var b = "sareer";
+		var c = "shahfahad"
+		var d = "raza";
+		var e = "malik";
+		if(a==b){
+			document.getElementById("first").innerHTML="Sareer khan";
+			var c = document.getElementById("pic");
+			c.classList.add("Sareer");
+		}
+		else if(a==c){
+			document.getElementById("first").innerHTML="Shahfahad";
+			var c = document.getElementById("pic");
+			c.classList.add("Shahfahad");
+		}
+		else if(a==d){
+			document.getElementById("first").innerHTML="Raza khan";
+			var c = document.getElementById("pic");
+			c.classList.add("raza");
+		}
+		else if(a==e){
+			document.getElementById("first").innerHTML="Irfan khan";
+			var c = document.getElementById("pic");
+			c.classList.add("malik");
+		}
+		else{
+			document.getElementById("first").innerHTML="please correct your name";
+		}
+
+
+*/
+		function one(){
+			document.getElementById("pic").style.opacity="0.9";
+		}
+
+		function two(){
+			document.getElementById("pic").style.opacity="0.8";
+		}
+
+		function three(){
+			document.getElementById("pic").style.opacity="0.7";
+		}
+
+		function four(){
+	document.getElementById("pic").style.transform='rotate(10deg)';
+		}
+
+		function five(){
+	document.getElementById("pic").style.transform='rotate(20deg)';
+		}
+		function six(){
+	document.getElementById("pic").style.transform='rotate(-10deg)';
+		}
+
+		function seven(){
+	document.getElementById("pic").style.transform='rotate(-20deg)';
+		}
+		
+		function eight(){
+	document.getElementById("pic").style.borderRadius = "25px";
+	document.getElementById("pic").style.border= "2px solid #555";
+		}
+
+		function nine(){
+		document.getElementById("pic").style.borderRadius = "100%";
+
+	
+        }
+
+        function ten(){
+	
+	document.getElementById("pic").style.transform='rotate(360deg)';
+	document.getElementById("pic").style.transition = "all 2s";
+
+        }
+
+      
+	</script>
+        
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Calculator </title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-image: url(fl.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;	
+
+		}
+		
+		
+		table{
+			margin-top: 50px;
+			margin-left: 500px;
+			width: 150px;
+			height: 400px;
+			background: #3d4543;  ;
+			border-radius: 15px;
+			
+		}
+		.cal{
+			
+			font-size: 40px;
+			margin-top: 5px;
+			color: whitesmoke;
+
+		}
+		div{
+			width: 350px;
+			height: 50px;
+			border: 1px solid black;
+			text-align: right;
+			padding-top: 8px;
+			font-size: 25px;
+			border-radius: 5px;
+			border-top: 3px solid black;
+			border-left: 3px solid black;
+			background:  #bccd95 ;
+		}
+		button{
+			width: 50px;
+			height: 40px;
+			margin-left: 15px;
+			border-radius: 10px;
+			font-size: 18px;
+			border: 1px solid gray;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	
+	<label class="cal">CALCULATOR</label> 
+	
+	<table>
+		<tr>
+	    
+		    <td colspan="4"><div id="result"></div></td>
+	    <tr>
+
+		<tr>
+			<td><button onclick="view()" style="background: gray; color: whitesmoke;border-bottom:black 2px solid;"> CE </button></td>
+		    <td><button onclick="view('2')" style="background:gray; color:whitesmoke;border-bottom:black 2px solid;">c</button></td>
+		    <td><button onclick="deleteLast()" style="background: gray; color: whitesmoke;border-bottom:black 2px solid;"> DEL </button></td>
+
+		    <td><button onclick="view('2')" style="background:lightblue; color:black;border-bottom:black 2px solid;">&#xF7</button></td>
+		
+		</tr>
+	        <td><button onclick="view('1')" style="background: white; color: black;border-bottom:black 2px solid;"> 1 </button></td>
+		    <td><button onclick="view('2')" style="background:white; color:black;border-bottom:black 2px solid;"> 2</button></td>
+		    <td><button onclick="view('3')" style="background: white; color: black;border-bottom:black 2px solid;"> 3 </button></td>
+		    <td><button onclick="view('+')" style="background:lightblue;  color:black; border-bottom:black 2px solid;">+</button></td>
+		
+		
+	    </tr>
+
+	<tr>
+		    <td><button onclick="view('4')" style="background: white; color: black;border-bottom:black 2px solid;"> 4 </button></td>
+		    <td><button onclick="view('5')" style="background:white; color:black;border-bottom:black 2px solid;">5</button></td>
+		    <td><button onclick="view('6')" style="background: white; color: black;border-bottom:black 2px solid;"> 6 </button></td>
+		    <td><button onclick="view('-')" style="background:lightblue; color:black;border-bottom:black 2px solid;">-</button></td>
+		
+	</tr>
+
+	<tr>
+		    <td><button onclick="view('7')" style="background: white; color: black;border-bottom:black 2px solid;"> 7 </button></td>
+		    <td><button onclick="view('8')" style="background:white; color:black;border-bottom:black 2px solid;">8</button></td>
+		    <td><button onclick="view('9')" style="background: white; color: black;border-bottom:black 2px solid;"> 9 </button></td>
+		    <td><button onclick="view('*')" style="background:lightblue; color:black;border-bottom:black 2px solid;">*</button></td>
+		
+	</tr>
+
+	<tr>
+		<td><button onclick="clr()" style="background:red; color:whitesmoke; border: 1px solid red;border-bottom:black 2px solid;"> c </button></td>
+		<td><button onclick="view('0')" style="background:white; color:black;border-bottom:black 2px solid;">0 </button></td>
+		<td><button onclick="compute()" style="border:1px solid whitesmoke;border-bottom:black 2px solid;">= </button></td>
+		<td><button onclick="view('/')" style="background:lightblue; color:black;border-bottom:black 2px solid;">/</button></td>
+	</tr>
+
+	</table>
+	
+	
+
+	<script type="text/javascript">
+		function view(num){
+			document.getElementById("result").innerHTML+=num;
+		}
+
+		function clr(){
+			document.getElementById("result").innerHTML="";
+		}
+		
+		function compute(){
+			let a = document.getElementById("result").innerHTML;
+			let b = eval(a);
+			document.getElementById("result").innerHTML = b;
+		}
+
+		function deleteLast() {
+			let oldValue = document.getElementById("result").innerHTML;
+			if(oldValue !== '') {
+			let length = oldValue.length;
+			let newValue = oldValue.substr(0, length - 1);
+		}
+	}
+	</script>
+
+
+</body>
+</html>

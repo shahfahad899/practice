@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> javaScript </title>
+	<style type="text/css">
+		.header{
+			width: 400px;
+			height: 100px;
+			border: 1px solid black;
+			margin-top: 50px;
+			margin-left: 450px;
+			background: salmon;
+
+
+		}
+		p{
+			font-size: 25px;
+			color: blue;
+			font-weight: bold;
+			line-height: 10px;
+			display: inline-block;
+			align-content: center;
+			margin-left: 10px;
+			padding: 5px 50px 0px 60px;
+		}
+		input{
+			width: 100px;
+			height: 20px;
+			margin-left: 50px;
+			font-size: 18px;
+
+
+		}
+		h1{
+			text-align: center;
+			font-family: sans-serif;
+
+		}
+	</style>
+</head>
+<body>
+	<h1> Unit Convertor </h1>
+	<div class="header">
+	<p> Feet </p>
+	<p> Inch</p>
+	<br>
+	<input type="text" name="" value="0" id="feet">
+	
+	<input type="text" name="" value="0" id="inch">
+	</div>
+
+	<script type="text/javascript">
+		var feet = document.getElementById("feet");
+		var inch = document.getElementById("inch");
+		feet.addEventListener("input",function()  {
+			let f = this.value;
+			 let i = f*12;
+			inch.value=i;
+		});
+
+
+		inch.addEventListener("input",function()  {
+			let j = this.value;
+			 let k = j/12;
+			 if(!Number.isInteger(k)){
+			 	k= k.toFixed(2);
+			 }
+			feet.value=k;
+		});
+
+
+
+	</script>
+
+</body>
+</html>
